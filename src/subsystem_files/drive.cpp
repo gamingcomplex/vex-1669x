@@ -8,14 +8,14 @@ void set_drive_tank(int left, int right) {
     drive_right_back = right;
 }
 
-void set_drive_arcade(int rotate, int drive) {
-    int maximum = std::max(abs(drive), abs(rotate));
-    int total = drive + rotate;
-    int difference = drive - rotate;
+void set_drive_arcade(int power, int direction) {
+    int maximum = std::max(abs(power), abs(direction));
+    int total = power + direction;
+    int difference = power - direction;
 
-    if (drive >= 0) // Forward
+    if (power >= 0) // Forward
     {
-        if (rotate >= 0) // NE direction
+        if (direction >= 0) // NE direction
         {
             drive_left_front = maximum;
             drive_left_back = maximum;
@@ -30,7 +30,7 @@ void set_drive_arcade(int rotate, int drive) {
         }
     } else // Reverse
     {
-        if (drive >= 0) // SE direction
+        if (direction >= 0) // SE direction
         {
             drive_left_front = total;
             drive_left_back = total;
