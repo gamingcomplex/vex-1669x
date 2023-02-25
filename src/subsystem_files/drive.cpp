@@ -49,20 +49,33 @@ void set_drive_arcade(int power, int direction) {
 
 // Driver Control Functions
 void set_drive_motors() {
-    int left_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
-    int right_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);
+    // Tank Drive Joysticks
+    // int left_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
+    // int right_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);
 
     // Deadzone
-    if (abs(left_joystick) < 5) {
-        left_joystick = 0;
+    // if (abs(left_joystick) < 5) {
+    //     left_joystick = 0;
+    // }
+    // if (abs(right_joystick) < 5) {
+    //     right_joystick = 0;
+    // }
+
+    // Arcade Drive Joysticks
+    int power_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
+    int direction_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
+
+    // Deadzone
+    if (abs(power_joystick) < 5) {
+        power_joystick = 0;
     }
-    if (abs(right_joystick) < 5) {
-        right_joystick = 0;
+    if (abs(direction_joystick) < 5) {
+        direction_joystick = 0;
     }
     
     // Tank Drive
     // set_drive_tank(left_joystick, right_joystick);
 
     // Arcade Drive
-    set_drive_arcade(left_joystick, right_joystick);
+    set_drive_arcade(power_joystick, direction_joystick);
 }
