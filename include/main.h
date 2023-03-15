@@ -43,7 +43,7 @@
 //#include "pros/api_legacy.h"
 #include "subsystem_headers/drive.hpp"
 #include "subsystem_headers/globals.hpp"
-#include "subsystem_headers/roller.hpp"
+#include "subsystem_headers/roller_intake.hpp"
 
 /**
  * If you find doing pros::Motor() to be tedious and you'd prefer just to do

@@ -93,7 +93,7 @@ void opcontrol() {
 
 	while (true) {
 		set_drive_motors();
-		set_roller_motors();
+		set_RI_motors();
 		pros::delay(10);
 	}
 }
