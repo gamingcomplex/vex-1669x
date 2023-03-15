@@ -2,10 +2,8 @@
 
 // Helper Functions
 void set_drive_tank(int left, int right) {
-    drive_left_front = left;
-    drive_left_back = left;
-    drive_right_front = right;
-    drive_right_back = right;
+    drive_left = left;
+    drive_right = right;
 }
 
 void set_drive_arcade(int power, int direction) {
@@ -17,31 +15,23 @@ void set_drive_arcade(int power, int direction) {
     {
         if (direction >= 0) // NE direction
         {
-            drive_left_front = maximum;
-            drive_left_back = maximum;
-            drive_right_front = difference;
-            drive_right_back = difference;
+            drive_left = maximum;
+            drive_right = difference;
         } else // NW direction
         {
-            drive_left_front = total;
-            drive_left_back = total;
-            drive_right_front = maximum;
-            drive_right_back = maximum;
+            drive_left = total;
+            drive_right = maximum;
         }
     } else // Reverse
     {
         if (direction >= 0) // SE direction
         {
-            drive_left_front = total;
-            drive_left_back = total;
-            drive_right_front = -maximum;
-            drive_right_back = -maximum;
+            drive_left = total;
+            drive_right = -maximum;
         } else // SW direction
         {
-            drive_left_front = -maximum;
-            drive_left_back = -maximum;
-            drive_right_front = difference;
-            drive_right_back = difference;
+            drive_left = -maximum;
+            drive_right = difference;
         }
     }
 
