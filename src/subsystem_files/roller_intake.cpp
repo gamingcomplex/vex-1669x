@@ -21,7 +21,7 @@ void set_RI_motors() {
 
     // Roller Hold - only if RI_on = false
     if (RI_on = false) {
-        if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
+        if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
             roller_intake.move_velocity(600);
         } else {
             roller_intake.move_velocity(0);
