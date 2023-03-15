@@ -6,7 +6,7 @@ bool RI_on = false;
 // Driver Control Functions
 void set_RI_motors() {
     
-    // Intake Toggle - only if R1 is not held
+    // Intake Toggle - only if R2 is not held
     if ((controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1) == true) && (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2) == false)) RI_on = !RI_on;
 
     if (RI_on) { 
