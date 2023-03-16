@@ -44,6 +44,7 @@
 #include "subsystem_headers/drive.hpp"
 #include "subsystem_headers/globals.hpp"
 #include "subsystem_headers/roller_intake.hpp"
+#include "subsystem_headers/cata.hpp"
 
 /**
  * If you find doing pros::Motor() to be tedious and you'd prefer just to do

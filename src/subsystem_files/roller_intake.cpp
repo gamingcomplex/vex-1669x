@@ -6,8 +6,8 @@ bool RI_on = false;
 // Driver Control Functions
 void set_RI_motors() {
     
-    // Intake Toggle - only if R1 is not held
-    if ((controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1) == true) && (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1) == false)) RI_on = !RI_on;
+    // Intake Toggle - only if R2 is not held
+    if (controller.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_L1) && !controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) RI_on = !RI_on;
 
     if (RI_on) { 
         if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2)) {
@@ -19,7 +19,7 @@ void set_RI_motors() {
         roller_intake.move_velocity(0);
     }
 
-    // Roller Hold - only if RI_on = false
+    // Roller Hold - only if RI toggle off
     if (RI_on = false) {
         if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
             roller_intake.move_velocity(600);
