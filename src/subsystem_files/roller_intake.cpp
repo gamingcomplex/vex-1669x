@@ -20,7 +20,7 @@ void set_RI_motors() {
     }
 
     // Roller Hold - only if RI toggle off
-    if (RI_on = false) {
+    if (!RI_on) {
         if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
             roller_intake.move_velocity(600);
         } else {
