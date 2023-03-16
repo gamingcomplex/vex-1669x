@@ -11,9 +11,9 @@ void set_RI_motors() {
 
     if (RI_on) { 
         if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2)) {
-            roller_intake.move_velocity(-600); // If intake is on and L2 is held, outtake
+            roller_intake.move_velocity(600); // If intake is on and L2 is held, outtake
         } else {
-            roller_intake.move_velocity(600); // If intake is on and L2 is not held, intake
+            roller_intake.move_velocity(-600); // If intake is on and L2 is not held, intake
         }
     } else {
         roller_intake.move_velocity(0);
@@ -22,7 +22,7 @@ void set_RI_motors() {
     // Roller Hold - only if RI toggle off
     if (!RI_on) {
         if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
-            roller_intake.move_velocity(600);
+            roller_intake.move_velocity(-600);
         } else {
             roller_intake.move_velocity(0);
         }
