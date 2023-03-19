@@ -9,7 +9,8 @@ void set_drive_tank(int left, int right) {
 void set_drive_arcade(int power, int direction) {
     int maximum = std::max(abs(power), abs(direction));
     int total = power + direction;
-    int difference = power - direction;
+    // int difference = power - direction;
+    int difference = direction - power; // Reversed to fix joysticks
 
     if (power >= 0) // Forward
     {
