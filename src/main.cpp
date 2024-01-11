@@ -93,8 +93,9 @@ void opcontrol() {
 
 	while (true) {
 		set_drive_motors();
-		set_RI_motors();
-		set_cata_motors();
+		// set_RI_motors();
+		// set_cata_motors();
+		toggle_wings();
 		pros::delay(10);
 	}
 }

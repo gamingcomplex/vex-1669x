@@ -19,3 +19,6 @@ extern pros::ADIDigitalIn ls;
 
 // Controller
 extern pros::Controller controller;
+
+// Pneumatic Wings
+extern pros::ADIDigitalOut wings;

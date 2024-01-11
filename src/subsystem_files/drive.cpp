@@ -9,8 +9,8 @@ void set_drive_tank(int left, int right) {
 void set_drive_arcade(int power, int direction) {
     int maximum = std::max(abs(power), abs(direction));
     int total = power + direction;
-    // int difference = power - direction;
-    int difference = direction - power; // Reversed to fix joysticks
+    int difference = power - direction;
+    // int difference = direction - power; // Reversed to fix joysticks
 
     if (power >= 0) // Forward
     {
@@ -44,7 +44,7 @@ void set_drive_motors() {
     // int left_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
     // int right_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_Y);
 
-    // Tank Drive Deadzone
+    // // Tank Drive Deadzone
     // if (abs(left_joystick) < 5) {
     //     left_joystick = 0;
     // }
@@ -56,7 +56,7 @@ void set_drive_motors() {
     int power_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
     int direction_joystick = controller.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
 
-    // Arcade Drive Deadzone
+    // // Arcade Drive Deadzone
     if (abs(power_joystick) < 5) {
         power_joystick = 0;
     }

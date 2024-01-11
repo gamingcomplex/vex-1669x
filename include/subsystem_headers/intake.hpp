@@ -4,4 +4,4 @@
 extern bool RI_on;
 
 // Driver Control Functions
-void set_RI_motors();
+void set_intake_motors();

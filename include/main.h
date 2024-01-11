@@ -41,10 +41,13 @@
  */
 //#include "okapi/api.hpp"
 //#include "pros/api_legacy.h"
-#include "subsystem_headers/drive.hpp"
+#include "subsystem_headers/bindings.hpp"
 #include "subsystem_headers/globals.hpp"
-#include "subsystem_headers/roller_intake.hpp"
-#include "subsystem_headers/cata.hpp"
+#include "subsystem_headers/drive.hpp"
+#include "subsystem_headers/wings.hpp"
+#include "subsystem_headers/intake.hpp"
+// #include "subsystem_headers/cata.hpp"
+// #include "subsystem_headers/autons.hpp"
 
 /**
  * If you find doing pros::Motor() to be tedious and you'd prefer just to do
